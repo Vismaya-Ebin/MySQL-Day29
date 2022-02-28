@@ -133,6 +133,41 @@ The following are the queries need to be executed
 | 5   | javascript |
 
 ---
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table tasks(id INT,topics TEXT ,completed TEXT,completionDate DATE, score INT);
+    
+    INSERT INTO tasks VALUES
+    (1,'javascript','yes','2021-12-22',6),
+    (2,'javascript','yes','2022-01-22',6),
+    (3,'javascript','yes','2022-02-22',6),
+    (4,'javascript','yes','2022-01-22',6),
+    (5,'javascript','yes','2022-02-22',6)
+    
+    ;
+    
+    
+    
+
+---
+
+**Query #5**
+
+    SELECT * FROM tasks;
+
+| id  | topics     | completed | completionDate | score |
+| --- | ---------- | --------- | -------------- | ----- |
+| 1   | javascript | yes       | 2021-12-22     | 6     |
+| 2   | javascript | yes       | 2022-01-22     | 6     |
+| 3   | javascript | yes       | 2022-02-22     | 6     |
+| 4   | javascript | yes       | 2022-01-22     | 6     |
+| 5   | javascript | yes       | 2022-02-22     | 6     |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/11)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/2)
 
