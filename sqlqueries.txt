@@ -1,1 +1,87 @@
 DATABASE TABLES
+
+The Following are the tables has to be in your database & model deisgn:
+users
+codekata
+attendance
+topics
+tasks
+company_drives
+mentors
+students_activated_courses
+courses
+
+The following are the queries need to be executed
+
+1. Create tables for the above list given
+**Schema (MySQL v8.0)**
+
+    
+    
+    CREATE TABLE users (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        email TEXT,
+        password TEXT
+        
+    );
+    INSERT INTO users  VALUES 
+    (1,'vismaya','vismayawilson3@gmail.com','567123'),
+    (2,'neethu','neethu@gmail.com','567123'),
+    (3,'meethu','meethu@gmail.com','568'),
+    (4,'lal','lal@gmail.com','lal567123'),
+    (5,'ebin','ebin@gmail.com','ebin567123')
+    ;
+    
+
+---
+
+**Query #1**
+
+    SELECT * FROM users;
+
+| id  | name    | email                    | password   |
+| --- | ------- | ------------------------ | ---------- |
+| 1   | vismaya | vismayawilson3@gmail.com | 567123     |
+| 2   | neethu  | neethu@gmail.com         | 567123     |
+| 3   | meethu  | meethu@gmail.com         | 568        |
+| 4   | lal     | lal@gmail.com            | lal567123  |
+| 5   | ebin    | ebin@gmail.com           | ebin567123 |
+
+---
+**Schema (MySQL v8.0)**
+
+    CREATE TABLE codekatta (
+        id INTEGER,
+        topics TEXT,
+        solved INTEGER,
+        geekcoins INTEGER
+        
+    );
+    INSERT INTO codekatta  VALUES 
+    (1,'Arrays',10,32),
+    (2,'Strings',10,456),
+    (3,'Bit manupulation',12,678),
+    (4,'Html',10,765),
+    (5,'CSS',10,654)
+    ;
+    
+
+---
+
+**Query #1**
+
+    SELECT * FROM codekatta;
+
+| id  | topics           | solved | geekcoins |
+| --- | ---------------- | ------ | --------- |
+| 1   | Arrays           | 10     | 32        |
+| 2   | Strings          | 10     | 456       |
+| 3   | Bit manupulation | 12     | 678       |
+| 4   | Html             | 10     | 765       |
+| 5   | CSS              | 10     | 654       |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/qsKALH5iMMUd3uiTdZbyGo/4)
+[View on DB Fiddle](https://www.db-fiddle.com/f/qsKALH5iMMUd3uiTdZbyGo/0)
