@@ -197,6 +197,39 @@ The following are the queries need to be executed
 | 5   | TCS       | yes      |
 
 ---
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table mentors(id INT,mentorName TEXT , course TEXT);
+    
+    INSERT INTO mentors VALUES
+    (1,'LAVISH','JS'),
+    (2,'LAVISH','JS'),
+    (3,'LAVISH','JS'),
+    (4,'RAGHAV','REACT'),
+    (5,'RAGHAV','REACT');
+    
+    
+    
+
+---
+
+**Query #7**
+
+    SELECT * FROM mentors;
+
+| id  | mentorName | course |
+| --- | ---------- | ------ |
+| 1   | LAVISH     | JS     |
+| 2   | LAVISH     | JS     |
+| 3   | LAVISH     | JS     |
+| 4   | RAGHAV     | REACT  |
+| 5   | RAGHAV     | REACT  |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/17)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/15)
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/11)
