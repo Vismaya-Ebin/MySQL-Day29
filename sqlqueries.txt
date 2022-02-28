@@ -344,6 +344,108 @@ The following are the queries need to be executed
 
 ---
 
+**Schema (MySQL v5.7)**
+
+    CREATE table companyDrives(id INT,companies TEXT , selected TEXT);
+        
+        INSERT INTO companyDrives VALUES
+        (1,'EY','yes'),
+        (2,'PWC','yes'),
+        (3,'UST','yes'),
+        (4,'CTS','yes'),
+        (5,'TCS','yes');
+        
+        
+        
+
+---
+
+**Query #10**
+
+    SELECT id,
+    COUNT(companyDrives.companies)
+    FROM   companyDrives
+    GROUP BY id;
+
+| id  | COUNT(companyDrives.companies) |
+| --- | ------------------------------ |
+| 1   | 1                              |
+| 2   | 1                              |
+| 3   | 1                              |
+| 4   | 1                              |
+| 5   | 1                              |
+
+---
+**Schema (MySQL v5.7)**
+
+     CREATE table courses(id INT, course TEXT);
+        
+        INSERT INTO courses VALUES
+        (1,'html'),
+        (2,'css'),
+        (3,'js'),
+        (4,'js'),
+        (5,'html');
+        
+        
+        CREATE table students_activated_courses(id INT, course TEXT);
+        
+        INSERT INTO students_activated_courses VALUES
+        (1,'MERN'),
+        (2,'MERN'),
+        (3,'MERN'),
+        (4,'MERN'),
+        (5,'MERN');
+
+---
+
+**Query #1**
+
+    SELECT *
+    FROM   courses INNER JOIN students_activated_courses
+    ON courses.id = students_activated_courses.id;
+
+| id  | course | id  | course |
+| --- | ------ | --- | ------ |
+| 1   | html   | 1   | MERN   |
+| 2   | css    | 2   | MERN   |
+| 3   | js     | 3   | MERN   |
+| 4   | js     | 4   | MERN   |
+| 5   | html   | 5   | MERN   |
+
+---
+
+**Schema (MySQL v5.7)**
+
+      
+        CREATE table mentors(id INT,mentorName TEXT , course TEXT);
+        
+        INSERT INTO mentors VALUES
+        (1,'LAVISH','JS'),
+        (2,'LAVISH','JS'),
+        (3,'LAVISH','JS'),
+        (4,'RAGHAV','REACT'),
+        (5,'RAGHAV','REACT');
+
+---
+
+**Query #1**
+
+    SELECT DISTINCT(mentorName)
+    FROM   mentors;
+
+| mentorName |
+| ---------- |
+| LAVISH     |
+| RAGHAV     |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/30)
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/27)
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/23)
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/21)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/19)
