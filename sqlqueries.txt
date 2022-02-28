@@ -69,7 +69,7 @@ The following are the queries need to be executed
 
 ---
 
-**Query #1**
+**Query #2**
 
     SELECT * FROM codekatta;
 
@@ -83,5 +83,59 @@ The following are the queries need to be executed
 
 ---
 
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table attendance(id INT,class INT,attended TEXT, percentage FLOAT);
+    
+    INSERT INTO attendance VALUES(1,1,'yes',100),(2,1,'yes',100),(3,1,'yes',100),(4,1,'yes',100),(5,1,'yes',100)
+
+---
+
+**Query #3**
+
+    SELECT * FROM attendance;
+
+| id  | class | attended | percentage |
+| --- | ----- | -------- | ---------- |
+| 1   | 1     | yes      | 100        |
+| 2   | 1     | yes      | 100        |
+| 3   | 1     | yes      | 100        |
+| 4   | 1     | yes      | 100        |
+| 5   | 1     | yes      | 100        |
+
+---
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table topics(id INT,topic TEXT);
+    
+    INSERT INTO topics VALUES(1,'javascript'),
+    (2,'javascript'),
+    (3,'javascript'),
+    (4,'javascript'),
+    (5,'javascript');
+
+---
+
+**Query #4**
+
+    SELECT * FROM topics;
+
+| id  | topic      |
+| --- | ---------- |
+| 1   | javascript |
+| 2   | javascript |
+| 3   | javascript |
+| 4   | javascript |
+| 5   | javascript |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/2)
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/1)
 [View on DB Fiddle](https://www.db-fiddle.com/f/qsKALH5iMMUd3uiTdZbyGo/4)
 [View on DB Fiddle](https://www.db-fiddle.com/f/qsKALH5iMMUd3uiTdZbyGo/0)
