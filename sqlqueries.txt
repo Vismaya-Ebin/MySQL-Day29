@@ -228,6 +228,72 @@ The following are the queries need to be executed
 | 5   | RAGHAV     | REACT  |
 
 ---
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table students_activated_courses(id INT, course TEXT);
+    
+    INSERT INTO students_activated_courses VALUES
+    (1,'MERN'),
+    (2,'MERN'),
+    (3,'MERN'),
+    (4,'MERN'),
+    (5,'MERN');
+    
+    
+    
+
+---
+
+**Query #8**
+
+    SELECT * FROM students_activated_courses;
+
+| id  | course |
+| --- | ------ |
+| 1   | MERN   |
+| 2   | MERN   |
+| 3   | MERN   |
+| 4   | MERN   |
+| 5   | MERN   |
+
+---
+**Schema (MySQL v5.7)**
+
+    
+    
+    CREATE table courses(id INT, course TEXT);
+    
+    INSERT INTO courses VALUES
+    (1,'html'),
+    (2,'css'),
+    (3,'js'),
+    (4,'js'),
+    (5,'html');
+    
+    
+    
+
+---
+
+**Query #9**
+
+    SELECT * FROM courses;
+
+| id  | course |
+| --- | ------ |
+| 1   | html   |
+| 2   | css    |
+| 3   | js     |
+| 4   | js     |
+| 5   | html   |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/21)
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/19)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/17)
 
