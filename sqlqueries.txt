@@ -166,7 +166,39 @@ The following are the queries need to be executed
 | 5   | javascript | yes       | 2022-02-22     | 6     |
 
 ---
+**Schema (MySQL v5.7)**
 
+    
+    
+    CREATE table companyDrives(id INT,companies TEXT , selected TEXT);
+    
+    INSERT INTO companyDrives VALUES
+    (1,'EY','yes'),
+    (2,'PWC','yes'),
+    (3,'UST','yes'),
+    (4,'CTS','yes'),
+    (5,'TCS','yes');
+    
+    
+    
+
+---
+
+**Query #6**
+
+    SELECT * FROM companyDrives;
+
+| id  | companies | selected |
+| --- | --------- | -------- |
+| 1   | EY        | yes      |
+| 2   | PWC       | yes      |
+| 3   | UST       | yes      |
+| 4   | CTS       | yes      |
+| 5   | TCS       | yes      |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/15)
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/11)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/tQPoBhtsZ4qbXAbVELTvZz/2)
