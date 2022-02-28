@@ -441,6 +441,34 @@ The following are the queries need to be executed
 
 ---
 
+**Schema (MySQL v5.7)**
+
+      
+        CREATE table mentors(id INT,mentorName TEXT , course TEXT);
+        
+        INSERT INTO mentors VALUES
+        (1,'LAVISH','JS'),
+        (2,'LAVISH','JS'),
+        (3,'LAVISH','JS'),
+        (4,'RAGHAV','REACT'),
+        (5,'RAGHAV','REACT');
+
+---
+
+**Query #1**
+
+    SELECT mentorName,COUNT(mentorName) AS NUMBER_STUDENTS
+    FROM   mentors
+    GROUP BY mentorName;
+
+| mentorName | NUMBER_STUDENTS |
+| ---------- | --------------- |
+| LAVISH     | 3               |
+| RAGHAV     | 2               |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/33)
 [View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/30)
 
 [View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/27)
