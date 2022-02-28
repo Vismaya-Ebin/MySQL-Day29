@@ -68,6 +68,59 @@ The following are the queries need to be executed
     
 
 ---
+**Schema (MySQL v5.7)**
+
+    CREATE TABLE users (
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            email TEXT,
+            password TEXT
+            
+        );
+        INSERT INTO users  VALUES 
+        (1,'vismaya','vismayawilson3@gmail.com','567123'),
+        (2,'neethu','neethu@gmail.com','567123'),
+        (3,'meethu','meethu@gmail.com','568'),
+        (4,'lal','lal@gmail.com','lal567123'),
+        (5,'ebin','ebin@gmail.com','ebin567123')
+        ;
+        
+           CREATE TABLE codekatta (
+            id INTEGER,
+            topics TEXT,
+            solved INTEGER,
+            geekcoins INTEGER
+            
+        );
+        INSERT INTO codekatta  VALUES 
+        (1,'Arrays',10,32),
+        (2,'Strings',10,456),
+        (3,'Bit manupulation',12,678),
+        (4,'Html',10,765),
+        (5,'CSS',10,654)
+        ;
+        
+        
+        
+
+---
+
+**Query #1**
+
+    SELECT users.id ,users.name,codekatta.solved from users INNER JOIN codekatta
+    ON users.id = codekatta.id;
+
+| id  | name    | solved |
+| --- | ------- | ------ |
+| 1   | vismaya | 10     |
+| 2   | neethu  | 10     |
+| 3   | meethu  | 12     |
+| 4   | lal     | 10     |
+| 5   | ebin    | 10     |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/uetCh9ZWjgMarcddg2aHuB/3)
 
 **Query #2**
 
